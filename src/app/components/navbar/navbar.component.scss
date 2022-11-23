@@ -1,0 +1,15 @@
+.navbar__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  background: whitesmoke;
+  padding: 15px;
+  li a {
+    cursor: pointer;
+    color: blueviolet;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+}
