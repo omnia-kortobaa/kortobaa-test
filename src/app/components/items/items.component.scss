@@ -1,0 +1,20 @@
+.item {
+  &__wrapper {
+    justify-content: space-evenly;
+  }
+
+  &__card {
+    width : 30%;
+    margin: 10px;
+  }
+
+  &__header,
+  &__description {
+    display   : block !important;
+    text-align: right;
+
+    .title {
+      color: navy
+    }
+  }
+}

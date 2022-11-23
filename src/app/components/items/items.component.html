@@ -1,1 +1,13 @@
-<p>items works!</p>
+<div class="item__wrapper d-flex" *ngIf="items.length > 0">
+  <mat-card class="item__card" *ngFor="let item of items">
+    <mat-card-header class="item__header">
+      <mat-card-title class="title">{{ item.title }}</mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        {{ item.type }} - {{ item.importance_level }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="item__description">
+      <p>{{ item.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

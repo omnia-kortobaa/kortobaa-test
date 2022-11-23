@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/app/interfaces/item';
 import { ItemsService } from 'src/app/services/items/items.service';
 
 @Component({
@@ -8,9 +9,11 @@ import { ItemsService } from 'src/app/services/items/items.service';
 })
 export class ItemsComponent implements OnInit {
   constructor(private __itemsService: ItemsService) {}
+  items: Array<Item> = [];
   ngOnInit(): void {
-    this.__itemsService.getallItems().subscribe((x) => {
-      console.log(x);
+    this.__itemsService.getallItems().subscribe((item) => {
+      console.log(item.data);
+      this.items = item.data;
     });
   }
 }
