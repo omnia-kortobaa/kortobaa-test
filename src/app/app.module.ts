@@ -7,9 +7,12 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent, NavbarComponent],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,MatMenuModule],
   providers: [],
   bootstrap: [AppComponent],
 })
