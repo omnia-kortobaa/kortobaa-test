@@ -9,10 +9,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import {MatMenuModule} from '@angular/material/menu';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,MatMenuModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,MatMenuModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
