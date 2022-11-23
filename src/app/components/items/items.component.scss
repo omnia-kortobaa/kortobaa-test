@@ -1,6 +1,6 @@
 .item {
   &__wrapper {
-    justify-content: space-evenly;
+    justify-content: start;
   }
 
   &__card {
@@ -8,13 +8,12 @@
     margin: 10px;
   }
 
-  &__header,
-  &__description {
-    display   : block !important;
-    text-align: right;
-
+  &__header {
     .title {
       color: navy
+    }
+    .subtitle{
+      color: brown;
     }
   }
 }

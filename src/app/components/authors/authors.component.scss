@@ -1,0 +1,16 @@
+.author {
+  &__wrapper {
+    justify-content: start;
+  }
+
+  &__card {
+    width : 30%;
+    margin: 10px;
+  }
+
+  &__header{
+    .title {
+      color: brown;
+    }
+  }
+}

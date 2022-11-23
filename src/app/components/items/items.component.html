@@ -2,7 +2,10 @@
   <mat-card class="item__card" *ngFor="let item of items">
     <mat-card-header class="item__header">
       <mat-card-title class="title">{{ item.title }}</mat-card-title>
-      <mat-card-subtitle class="subtitle">
+      <mat-card-subtitle class="subtitle" *ngFor="let author of item.prepared_by">
+        {{ author.title }}
+      </mat-card-subtitle>
+      <mat-card-subtitle>
         {{ item.type }} - {{ item.importance_level }}
       </mat-card-subtitle>
     </mat-card-header>

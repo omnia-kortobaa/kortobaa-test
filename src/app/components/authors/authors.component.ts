@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Author } from 'src/app/interfaces/author';
 import { AuthorsService } from 'src/app/services/authors/authors.service';
 
 @Component({
@@ -8,9 +9,12 @@ import { AuthorsService } from 'src/app/services/authors/authors.service';
 })
 export class AuthorsComponent {
   constructor(private __authorsService: AuthorsService) {}
+  authors: Array<Author> = [];
+
   ngOnInit(): void {
-    this.__authorsService.getAllAuthors().subscribe((x) => {
-      console.log(x);
+    this.__authorsService.getAllAuthors().subscribe((author) => {
+      this.authors = author.data
+      console.log(this.authors);
     });
   }
 }

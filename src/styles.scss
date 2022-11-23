@@ -9,9 +9,17 @@
 ul {
   list-style-type: none;
 }
-a{      text-decoration: none;
+a {
+  text-decoration: none;
+}
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 .container {
   width: 90%;
   margin: 0 auto;
+}
+.language{
+  direction: rtl;
 }

@@ -1,3 +1,4 @@
+import { AuthorsModule } from './modules/authors/authors.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,13 +8,27 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
-import {MatMenuModule} from '@angular/material/menu';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemsModule } from './modules/items/items.module';
+import { CategoriesModule } from './modules/categories/categories.module';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule,MatMenuModule,HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NotFoundComponent,
+    NavbarComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ItemsModule,
+    CategoriesModule,
+    AuthorsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

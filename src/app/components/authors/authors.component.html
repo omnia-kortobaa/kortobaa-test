@@ -1,1 +1,13 @@
-<p>authors works!</p>
+<div class="author__wrapper d-flex" *ngIf="authors.length > 0">
+  <mat-card class="author__card" *ngFor="let author of authors">
+    <mat-card-header class="author__header">
+      <mat-card-title class="title">{{ author.title }}</mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        {{ author.type === false? '':author.type}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="author__description">
+      <p>{{ author.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
