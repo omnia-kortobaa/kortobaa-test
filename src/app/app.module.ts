@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
@@ -14,12 +13,7 @@ import { ItemsModule } from './modules/items/items.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NotFoundComponent,
-    NavbarComponent,
-  ],
+  declarations: [AppComponent, NotFoundComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,7 +21,7 @@ import { CategoriesModule } from './modules/categories/categories.module';
     HttpClientModule,
     ItemsModule,
     CategoriesModule,
-    AuthorsModule
+    AuthorsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

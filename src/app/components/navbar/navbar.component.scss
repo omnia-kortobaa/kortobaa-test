@@ -5,11 +5,11 @@
   padding: 15px;
   li a {
     cursor: pointer;
-    color: blueviolet;
+    color: navy;
     font-weight: 500;
     &:hover,
     &:focus {
-      color: red;
+      color: brown;
     }
   }
 }
