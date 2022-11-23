@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ItemsComponent } from './components/items/items.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { AuthorsComponent } from './components/authors/authors.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthorsComponent } from './components/authors/authors.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
