@@ -9,11 +9,18 @@ import { CategoriesService } from 'src/app/services/categories/categories.servic
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent implements OnInit, OnDestroy {
-  constructor(private __cateService: CategoriesService) {}
+  constructor(private __cateService: CategoriesService) { }
   categories: Array<Category> = [];
   subscription!: Subscription;
 
   ngOnInit(): void {
+    this.getAllCate();
+  }
+
+  /* ------------------------------------------------------- */
+  /*                  Get Categories From Api                */
+  /* ------------------------------------------------------- */
+  getAllCate() {
     this.subscription = this.__cateService
       .getAllCategories()
       .subscribe((cate) => {
@@ -21,6 +28,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
         console.log(this.categories);
       });
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
