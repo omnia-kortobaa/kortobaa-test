@@ -6,12 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CategoriesService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
+  baseUrl: string = 'https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/sitecontent/ar/ar/json'
 
-  // ******* Get All Categories ***********
+  /* ------------------------------------------------------- */
+  /*                  Get Categories From Api                */
+  /* ------------------------------------------------------- */
   getAllCategories(): Observable<any> {
-    return this.http.get(
-      'https://api3.islamhouse.com/v3/paV29H2gm56kvLPy/main/sitecontent/ar/ar/json'
-    );
+    return this.http.get(this.baseUrl);
   }
 }
