@@ -15,7 +15,7 @@ import { CategoriesModule } from './modules/categories/categories.module';
 @NgModule({
   declarations: [AppComponent, NotFoundComponent, NavbarComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
