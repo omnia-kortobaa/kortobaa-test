@@ -14,6 +14,5 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule,
     MatProgressBarModule
   ],
-  // exports: [AuthorsComponent]
 })
 export class AuthorsModule { }
