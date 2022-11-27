@@ -12,6 +12,6 @@ import {MatCardModule} from '@angular/material/card';
     AuthorsRoutingModule,
     MatCardModule
   ],
-  exports:[AuthorsComponent]
+  // exports:[AuthorsComponent]
 })
 export class AuthorsModule { }

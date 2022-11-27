@@ -13,6 +13,6 @@ import {MatCardModule} from '@angular/material/card';
     ItemsRoutingModule,
     MatCardModule
   ],
-  exports:[ItemsComponent]
+  // exports:[ItemsComponent]
 })
 export class ItemsModule { }

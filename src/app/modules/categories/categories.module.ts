@@ -8,6 +8,6 @@ import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [CategoriesComponent],
   imports: [CommonModule, CategoriesRoutingModule,MatCardModule],
-  exports: [CategoriesComponent],
+  // exports: [CategoriesComponent],
 })
 export class CategoriesModule {}
