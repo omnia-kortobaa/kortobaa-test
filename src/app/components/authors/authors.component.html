@@ -1,3 +1,12 @@
+<!---------------------------------------------------------->
+<!--                  loading if no data                  -->
+<!---------------------------------------------------------->
+<div *ngIf="authors.length === 0">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<!---------------------------------------------------------->
+<!--                    Authors Data                      -->
+<!---------------------------------------------------------->
 <div class="author__wrapper d-flex" *ngIf="authors.length > 0">
   <mat-card class="author__card" *ngFor="let author of authors">
     <mat-card-header class="author__header">

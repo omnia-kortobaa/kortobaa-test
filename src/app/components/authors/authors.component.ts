@@ -9,11 +9,18 @@ import { AuthorsService } from 'src/app/services/authors/authors.service';
   styleUrls: ['./authors.component.scss'],
 })
 export class AuthorsComponent implements OnInit, OnDestroy {
-  constructor(private __authorsService: AuthorsService) {}
+  constructor(private __authorsService: AuthorsService) { }
   authors: Array<Author> = [];
   subscription!: Subscription;
 
   ngOnInit(): void {
+    this.getAllAuth();
+  }
+
+  /* ------------------------------------------------------- */
+  /*                   Get Authors From Api                  */
+  /* ------------------------------------------------------- */
+  getAllAuth() {
     this.subscription = this.__authorsService
       .getAllAuthors()
       .subscribe((author) => {
@@ -21,6 +28,7 @@ export class AuthorsComponent implements OnInit, OnDestroy {
         console.log(this.authors);
       });
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

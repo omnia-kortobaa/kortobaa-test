@@ -9,15 +9,25 @@ import { ItemsService } from 'src/app/services/items/items.service';
   styleUrls: ['./items.component.scss'],
 })
 export class ItemsComponent implements OnInit, OnDestroy {
-  constructor(private __itemsService: ItemsService) {}
+  constructor(private __itemsService: ItemsService) { }
+
   items: Array<Item> = [];
   subscription!: Subscription;
+
   ngOnInit(): void {
-    this.__itemsService.getallItems().subscribe((item) => {
+    this.getAllItem();
+  }
+
+  /* ------------------------------------------------------- */
+  /*                  Get Items From Api                     */
+  /* ------------------------------------------------------- */
+  getAllItem() {
+    this.subscription = this.__itemsService.getallItems().subscribe((item) => {
       console.log(item.data);
       this.items = item.data;
     });
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

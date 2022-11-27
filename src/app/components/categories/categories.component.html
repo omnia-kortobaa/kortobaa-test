@@ -1,11 +1,18 @@
+<!---------------------------------------------------------->
+<!--                  loading if no data                  -->
+<!---------------------------------------------------------->
+<div *ngIf="categories.length === 0">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<!---------------------------------------------------------->
+<!--                    Categories Data                   -->
+<!---------------------------------------------------------->
 <div class="category__wrapper d-flex" *ngIf="categories.length > 0">
   <mat-card class="category__card" *ngFor="let cate of categories">
     <mat-card-header class="category__header d-flex">
       <mat-card-title class="title">{{ cate.block_name }}</mat-card-title>
       <span class="count">{{ cate.items_count }}</span>
     </mat-card-header>
-    <mat-card-content class="category__description">
-
-    </mat-card-content>
+    <mat-card-content class="category__description"> </mat-card-content>
   </mat-card>
 </div>

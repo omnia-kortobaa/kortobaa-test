@@ -1,12 +1,14 @@
 .navbar__wrapper {
-  display: flex;
+  display        : flex;
   justify-content: space-evenly;
-  background: whitesmoke;
-  padding: 15px;
+  background     : whitesmoke;
+  padding        : 15px;
+
   li a {
-    cursor: pointer;
-    color: navy;
+    cursor     : pointer;
+    color      : navy;
     font-weight: 500;
+
     &:hover,
     &:focus {
       color: brown;
